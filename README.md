@@ -4,7 +4,7 @@ An autonomous multi-agent incident investigation system designed to perform caus
 
 ---
 
-## 📌 Architecture Overview
+##  Architecture Overview
 
 When presented with an anomaly or incident event (e.g. *"sales dropped 18% last week"*), the system decomposes the problem and coordinates a team of specialized investigator agents:
 
@@ -17,7 +17,7 @@ When presented with an anomaly or incident event (e.g. *"sales dropped 18% last 
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```text
 ├── agents/                  # Specialized investigator agents
@@ -41,7 +41,7 @@ When presented with an anomaly or incident event (e.g. *"sales dropped 18% last 
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Prerequisites
 - Python 3.10+
