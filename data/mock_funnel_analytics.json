@@ -1,0 +1,54 @@
+{
+  "metric_name": "checkout_conversion_funnel",
+  "description": "Funnel drop-off analysis by region and platform comparing week before vs incident week",
+  "baseline_period": "2026-10-15 to 2026-10-21",
+  "incident_period": "2026-10-22 to 2026-10-28",
+  "steps": [
+    "1_session_start",
+    "2_view_product",
+    "3_add_to_cart",
+    "4_checkout_start",
+    "5_payment_completed"
+  ],
+  "funnel_by_region": {
+    "US": {
+      "baseline_checkout_to_payment_conversion_rate": 88.5,
+      "incident_checkout_to_payment_conversion_rate": 88.2,
+      "delta_percentage": -0.34
+    },
+    "APAC": {
+      "baseline_checkout_to_payment_conversion_rate": 86.8,
+      "incident_checkout_to_payment_conversion_rate": 86.5,
+      "delta_percentage": -0.35
+    },
+    "LATAM": {
+      "baseline_checkout_to_payment_conversion_rate": 84.1,
+      "incident_checkout_to_payment_conversion_rate": 83.9,
+      "delta_percentage": -0.24
+    },
+    "EU": {
+      "baseline_checkout_to_payment_conversion_rate": 89.2,
+      "incident_checkout_to_payment_conversion_rate": 21.4,
+      "delta_percentage": -76.01,
+      "platform_breakdown": {
+        "web": {
+          "baseline": 90.1,
+          "incident": 88.9,
+          "delta": -1.33
+        },
+        "ios": {
+          "baseline": 88.7,
+          "incident": 16.2,
+          "delta": -81.74
+        },
+        "android": {
+          "baseline": 88.9,
+          "incident": 14.8,
+          "delta": -83.35
+        }
+      },
+      "primary_dropoff_stage": "4_checkout_start -> 5_payment_completed",
+      "dominant_error": "ERR_502_PAYMENT_WEBHOOK_TIMEOUT"
+    }
+  }
+}

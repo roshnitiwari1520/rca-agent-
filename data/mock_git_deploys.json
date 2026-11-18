@@ -1,0 +1,94 @@
+{
+  "deployments": [
+    {
+      "id": "PR-478",
+      "title": "perf: improve redis caching on product catalog query",
+      "author": "sarah.chen",
+      "merged_at": "2026-10-21T09:30:00Z",
+      "deployed_at": "2026-10-21T09:45:00Z",
+      "service": "catalog-service",
+      "files_changed": [
+        "src/cache/redis.py",
+        "src/services/catalog.py"
+      ],
+      "impact": "low"
+    },
+    {
+      "id": "PR-479",
+      "title": "docs: update API documentation for order query endpoints",
+      "author": "mike.ross",
+      "merged_at": "2026-10-21T16:15:00Z",
+      "deployed_at": "2026-10-21T16:20:00Z",
+      "service": "docs",
+      "files_changed": [
+        "docs/api_v2.md"
+      ],
+      "impact": "none"
+    },
+    {
+      "id": "PR-480",
+      "title": "feat(analytics): add impression tracking to product carousel",
+      "author": "rachel.zane",
+      "merged_at": "2026-10-22T10:00:00Z",
+      "deployed_at": "2026-10-22T10:15:00Z",
+      "service": "frontend-web",
+      "files_changed": [
+        "src/components/Carousel.tsx",
+        "src/telemetry/events.ts"
+      ],
+      "impact": "low"
+    },
+    {
+      "id": "PR-481",
+      "title": "fix(ui): adjust navbar padding on tablet viewport",
+      "author": "harvey.specter",
+      "merged_at": "2026-10-22T12:45:00Z",
+      "deployed_at": "2026-10-22T13:00:00Z",
+      "service": "frontend-web",
+      "files_changed": [
+        "src/styles/navbar.css"
+      ],
+      "impact": "none"
+    },
+    {
+      "id": "PR-482",
+      "title": "refactor(checkout): update Stripe webhook endpoint and timeout configs for EU region",
+      "author": "alex.dev",
+      "merged_at": "2026-10-22T14:10:00Z",
+      "deployed_at": "2026-10-22T14:15:00Z",
+      "service": "payment-gateway-service",
+      "files_changed": [
+        "services/payment/stripe_client.py",
+        "config/eu_gateway.yaml",
+        "helm/values-eu.yaml"
+      ],
+      "diff_summary": "Reduced webhook timeout from 2000ms to 300ms; updated EU callback URL to deprecated endpoint format",
+      "impact": "CRITICAL",
+      "root_cause_flag": true
+    },
+    {
+      "id": "PR-483",
+      "title": "chore(deps): bump requests from 2.31.0 to 2.32.3",
+      "author": "dependabot[bot]",
+      "merged_at": "2026-10-23T04:00:00Z",
+      "deployed_at": "2026-10-23T04:15:00Z",
+      "service": "auth-service",
+      "files_changed": [
+        "requirements.txt"
+      ],
+      "impact": "none"
+    },
+    {
+      "id": "PR-484",
+      "title": "perf(database): add composite index on customer order history",
+      "author": "donna.paulsen",
+      "merged_at": "2026-10-24T11:20:00Z",
+      "deployed_at": "2026-10-24T11:35:00Z",
+      "service": "order-service",
+      "files_changed": [
+        "migrations/20261024_add_index.sql"
+      ],
+      "impact": "low"
+    }
+  ]
+}

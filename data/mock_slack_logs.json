@@ -1,0 +1,87 @@
+{
+  "channels": {
+    "general": [
+      {
+        "timestamp": "2026-10-22T11:30:00Z",
+        "user": "sarah.chen",
+        "text": "Anyone want to grab pizza for lunch today?"
+      },
+      {
+        "timestamp": "2026-10-22T11:32:00Z",
+        "user": "alex.dev",
+        "text": "I'm in! Let me just finish this payment PR first."
+      },
+      {
+        "timestamp": "2026-10-23T09:00:00Z",
+        "user": "hr_team",
+        "text": "Reminder: All hands meeting tomorrow at 3 PM UTC."
+      }
+    ],
+    "dev-deployments": [
+      {
+        "timestamp": "2026-10-21T09:45:00Z",
+        "user": "github-bot",
+        "text": "PR #478 deployed to production (catalog-service)"
+      },
+      {
+        "timestamp": "2026-10-22T10:15:00Z",
+        "user": "github-bot",
+        "text": "PR #480 deployed to production (frontend-web)"
+      },
+      {
+        "timestamp": "2026-10-22T14:15:00Z",
+        "user": "github-bot",
+        "text": "PR #482 deployed to production (payment-gateway-service) by alex.dev"
+      },
+      {
+        "timestamp": "2026-10-23T04:15:00Z",
+        "user": "github-bot",
+        "text": "PR #483 deployed to production (auth-service)"
+      }
+    ],
+    "alerts-monitoring": [
+      {
+        "timestamp": "2026-10-22T08:00:00Z",
+        "user": "datadog-bot",
+        "text": "INFO: Daily backup completed successfully."
+      },
+      {
+        "timestamp": "2026-10-22T14:48:00Z",
+        "user": "datadog-bot",
+        "text": "TRIGGERED: High 502 Rate on service [payment-gateway-service] region: [eu-central-1] threshold > 5% (current: 14.8%)"
+      },
+      {
+        "timestamp": "2026-10-22T15:20:00Z",
+        "user": "datadog-bot",
+        "text": "TRIGGERED: Elevated checkout drop-off rate detected in region [EU] on mobile endpoints."
+      },
+      {
+        "timestamp": "2026-10-23T02:00:00Z",
+        "user": "datadog-bot",
+        "text": "WARN: Memory usage on worker-pool-2 at 78%"
+      }
+    ],
+    "incident-payments": [
+      {
+        "timestamp": "2026-10-22T14:55:00Z",
+        "user": "support-lead",
+        "text": "@channel We are getting angry customer tickets from Germany and France saying order placement is timing out on their phone."
+      },
+      {
+        "timestamp": "2026-10-22T15:02:00Z",
+        "user": "sarah.chen",
+        "text": "Looking at EU payment service now. Webhook timeouts are spiking. Did anyone touch payments recently?"
+      },
+      {
+        "timestamp": "2026-10-22T15:05:00Z",
+        "user": "alex.dev",
+        "text": "I merged PR #482 around 14:10 UTC to adjust EU gateway timeouts. Let me check the config."
+      },
+      {
+        "timestamp": "2026-10-22T15:15:00Z",
+        "user": "alex.dev",
+        "text": "Wait, the timeout was set to 300ms instead of 3000ms in values-eu.yaml! Stripe EU webhooks usually take 800ms+ under load."
+      }
+    ]
+  }
+}
